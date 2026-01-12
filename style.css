@@ -1,0 +1,260 @@
+/* Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef; /* Cyan Blue Accent */
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+.logo span { color: var(--main-color); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+.nav-links a {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-left: 2.5rem;
+    transition: .3s;
+}
+.nav-links a:hover, .active {
+    color: var(--main-color);
+}
+.github-btn {
+    padding: 8px 20px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 20px;
+    font-weight: 600;
+}
+.ham { display: none; font-size: 1.8rem; cursor: pointer; }
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 6rem 5% 2rem;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.hero-content h3 { font-size: 1.5rem; font-weight: 700; }
+.hero-content h1 { font-size: 3rem; font-weight: 700; line-height: 1.3; }
+.text-highlight { color: var(--main-color); }
+.hero-content p { font-size: 1rem; margin: 1rem 0 2rem; }
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: .1rem solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    margin-right: 1rem;
+    transition: .5s;
+}
+.social-icons a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background: var(--main-color);
+    border-radius: 2rem;
+    color: var(--bg-color);
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    transition: .3s;
+}
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+.btn:hover { box-shadow: 0 0 10px var(--main-color); }
+
+.hero-img img {
+    width: 25vw;
+    border-radius: 50%;
+    border: 5px solid var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+/* Skills Section */
+.heading { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; }
+.heading span { color: var(--main-color); }
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+.skill-box {
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: .5s;
+}
+.skill-box:hover { transform: translateY(-10px); border: 1px solid var(--main-color); }
+.skill-box i { font-size: 3rem; color: var(--main-color); margin-bottom: 1rem; }
+
+/* Experience Section */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: 2px solid var(--main-color);
+    padding-left: 2rem;
+}
+.timeline-item { position: relative; margin-bottom: 3rem; }
+.timeline-dot {
+    position: absolute;
+    left: -2.6rem;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+.timeline-date { font-size: 0.9rem; color: var(--main-color); margin-bottom: 0.5rem; }
+.timeline-content {
+    background: var(--second-bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    transition: .3s;
+}
+.timeline-content:hover { border-color: var(--main-color); }
+
+/* Projects Section */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.project-card {
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    transition: .5s;
+}
+.project-card:hover { transform: translateY(-10px); border-color: var(--main-color); }
+.project-links a {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    display: inline-block;
+}
+.project-links a:hover { color: var(--main-color); }
+
+.contact {
+    display: flex;               /* Flexbox on kiya */
+    justify-content: space-between; /* Text Left, Icon Right */
+    align-items: center;         /* Vertically Center */
+    flex-wrap: wrap;             /* Mobile ke liye wrap */
+    padding: 2rem 9%;            /* Thoda padding diya */
+    background: var(--second-bg-color);
+}
+
+.footer-text p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background: var(--main-color);
+    border-radius: 0.8rem;
+    transition: .5s;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 1.5rem;
+    color: var(--second-bg-color);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .ham { display: block; }
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        flex-direction: column;
+        display: none; /* JS se toggle hoga */
+        padding: 1rem;
+        border-top: 1px solid rgba(0,0,0,0.2);
+    }
+    .nav-links.active { display: flex; }
+    .nav-links a { margin: 1rem 0; display: block; text-align: center; }
+    
+    .hero { flex-direction: column-reverse; gap: 2rem; text-align: center; }
+    .hero-img img { width: 60vw; }
+    .hero-content h1 { font-size: 2.2rem; }
+    .contact {
+        flex-direction: column;      /* Ek ke neeche ek */
+        justify-content: center;     /* Center mein lao */
+        text-align: center;          /* Text bhi center */
+        gap: 1rem;                   /* Thoda gap do */
+    }
+}
